@@ -130,6 +130,8 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -141,6 +143,8 @@ body {
     background-color: var(--neutral-white);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 /* Hide body scroll when preloader is active */
@@ -1041,18 +1045,33 @@ img {
 }
 
 .rsvp-content.has-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 40px;
-    max-width: 1400px;
+    max-width: 100%;
     margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+    .rsvp-content.has-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1400px;
+    }
 }
 
 .rsvp-form-card {
     background: #ffffff;
-    padding: 48px;
-    border: 2px solid #e3e3dc;
+    padding: 32px;
+    border: 1px solid #e3e3dc;
     position: relative;
+}
+
+@media (min-width: 768px) {
+    .rsvp-form-card {
+        padding: 48px;
+        border: 2px solid #e3e3dc;
+    }
 }
 
 .form-title-editorial {
@@ -1255,12 +1274,19 @@ img {
 
 .rsvp-list-card-editorial {
     background: #ffffff;
-    padding: 48px;
-    border: 2px solid #e3e3dc;
+    padding: 32px;
+    border: 1px solid #e3e3dc;
     position: relative;
-    height: 100%;
     display: flex;
     flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .rsvp-list-card-editorial {
+        padding: 48px;
+        border: 2px solid #e3e3dc;
+        height: 100%;
+    }
 }
 
 .list-header-editorial {
@@ -2399,99 +2425,275 @@ img {
     margin: 0;
 }
 
-/* ==================== GIFT SECTION ==================== */
+/* ==================== GIFT SECTION (EDITORIAL REFINED) ==================== */
 .gift-section {
-    padding: var(--section-padding-vertical) 0;
-    background-color: var(--secondary-cream);
-}
-
-.gift-intro {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto var(--spacing-12);
-    color: var(--text-secondary);
-    font-size: var(--font-size-lg);
-}
-
-.gift-cards-wrapper {
-    display: grid;
-    gap: var(--spacing-6);
-    max-width: 800px;
-    margin: 0 auto var(--spacing-12);
-}
-
-.gift-card {
-    background-color: var(--neutral-white);
-    padding: var(--spacing-8);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-}
-
-.gift-card-header {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-3);
-    margin-bottom: var(--spacing-6);
-    padding-bottom: var(--spacing-4);
-    border-bottom: 1px solid var(--neutral-gray-200);
-}
-
-.gift-card-header i {
-    font-size: var(--font-size-2xl);
-    color: var(--primary-rose);
-}
-
-.gift-card-header h3 {
-    font-size: var(--font-size-xl);
-    color: var(--text-primary);
-}
-
-.qris-content {
-    text-align: center;
-}
-
-.qris-image {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto var(--spacing-4);
-}
-
-.qris-instruction {
-    color: var(--text-secondary);
-}
-
-/* Bank Details */
-.bank-details {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-4);
-}
-
-.bank-item {
-    border: 1px solid var(--neutral-gray-200);
-    border-radius: var(--radius-md);
+    padding: 120px 0;
+    background-color: #fbf9f5;
+    position: relative;
     overflow: hidden;
 }
 
-.bank-toggle {
+/* Header Refinements */
+.section-subtitle-gift {
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    color: #894e56; /* Rose color from screenshot */
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.gift-main-title {
+    color: #7a5a00; /* Olive Gold */
+    font-size: 4rem;
+    margin-bottom: 32px;
+}
+
+.gift-intro-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.gift-intro-editorial {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #5e605b;
+    text-align: center;
+}
+
+.leaf-icon {
+    color: #7a5a00;
+    font-variation-settings: 'FILL' 1;
+}
+
+/* Layout */
+.gift-grid-editorial {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 60px;
+    position: relative;
+}
+
+@media (min-width: 992px) {
+    .gift-grid-editorial {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 0;
+        margin-top: 80px;
+    }
+    .gift-col-qris {
+        grid-column: span 5;
+        padding-right: 32px;
+    }
+    .gift-col-bank {
+        grid-column: span 7;
+        background-color: #f5f4ef;
+        padding: 64px 48px;
+    }
+}
+
+@media (max-width: 991px) {
+    .gift-col-bank {
+         background-color: #f5f4ef;
+         padding: 32px 24px;
+    }
+}
+
+/* QRIS Card Refined */
+.qris-card-editorial {
+    background-color: #ffffff;
+    padding: 32px 24px;
+    border: 1px solid #e3e3dc;
+    text-align: center;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .qris-card-editorial {
+        padding: 64px 48px;
+        height: 100%;
+    }
+}
+
+.qris-header-internal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 48px;
+    position: relative;
+}
+
+.qris-header-internal .label-editorial {
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: #894e56;
+}
+
+.corner-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.5rem;
+    color: #b2b2ad;
+    opacity: 0.3;
+}
+
+.qris-image-wrapper {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto 32px;
+    padding: 24px;
+    background: #fbfbfb;
+    border: 1px solid #f2f2f2;
+}
+
+.qris-image-editorial {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.qris-instruction-editorial {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    color: #31332f;
+    margin-bottom: 48px;
+}
+
+.qris-footer {
     display: flex;
     align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    opacity: 0.6;
+}
+
+.qris-footer .divider-line {
+    height: 1px;
+    flex: 1;
+    background: #e3e3dc;
+}
+
+.qris-footer .footer-label {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+}
+
+.qris-bank-icons-footer {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    color: #5e605b;
+}
+
+/* Bank column Refined */
+.bank-header-editorial {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 48px;
+}
+
+.bank-icon-box {
+    width: 48px;
+    height: 48px;
+    background-color: #eadbc9;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4d4337;
+}
+
+.bank-list-editorial {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.bank-row-refined {
+    background: #ffffff;
+    padding: 32px;
+    display: flex;
     justify-content: space-between;
-    padding: var(--spacing-4);
-    background-color: var(--neutral-gray-100);
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.bank-label-rose {
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    color: #894e56;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.bank-number-refined {
+    font-family: 'Noto Serif', serif;
+    font-size: 2.25rem;
+    font-style: italic;
+    color: #31332f;
+    margin-bottom: 4px;
+}
+
+.bank-name-editorial {
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    color: #5e605b;
+}
+
+.copy-btn-refined {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: 1px solid #e3e3dc;
+    background: transparent;
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: #7a5a00;
     cursor: pointer;
-    transition: background-color var(--transition-fast);
+    transition: all 0.3s;
 }
 
-.bank-toggle:hover {
-    background-color: var(--neutral-gray-200);
+.copy-btn-refined:hover {
+    border-color: #7a5a00;
+    background-color: rgba(122, 90, 0, 0.02);
 }
 
-.bank-name {
-    font-family: var(--font-body);
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-semibold);
-    color: var(--text-primary);
+.copy-btn-refined.copied {
+    background-color: #7a5a00;
+    color: #ffffff;
+    border-color: #7a5a00;
+}
+
+.gift-ornament {
+    position: absolute;
+    color: #7a5a00;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.ornament-top-right {
+    top: -48px;
+    right: -48px;
+    transform: rotate(45deg);
+}
+
+.ornament-mid-left {
+    top: 50%;
+    left: -64px;
+    transform: translateY(-50%) rotate(-12deg);
 }
 
 .bank-toggle i {
@@ -2829,4 +3031,27 @@ img {
 .toast i {
     color: var(--accent-sage);
     margin-right: var(--spacing-2);
+}
+
+/* Toast Notification */
+.toast-editorial {
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background-color: #31332f;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 99px;
+    font-size: 11px;
+    font-family: 'Manrope', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    z-index: 10000;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.toast-editorial.show {
+    transform: translateX(-50%) translateY(0);
 }

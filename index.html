@@ -493,101 +493,103 @@
     </section>
     <!-- ====================================================== -->
 
-    <!-- ==================== GIFT SECTION ==================== -->
     <section class="gift-section" id="gift">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Your Presence is Present Enough</span>
-                <h2 class="section-title">Wedding Gift</h2>
-                <div class="section-divider"></div>
-            </div>
+        <div class="container max-w-7xl mx-auto px-6">
+            <!-- Header Section -->
+            <header class="section-header editorial-header mb-16">
+                <p class="section-subtitle-gift">WEDDING GIFT</p>
+                <h2 class="section-title-editorial italic gift-main-title">Your Presence is Present Enough</h2>
+                <div class="gift-intro-wrapper">
+                    <p class="gift-intro-editorial">
+                        Your presence at our wedding is the greatest gift of all. However, if you wish to honor us with a gift, we would be grateful for a contribution towards our future together.
+                    </p>
+                </div>
+                <div class="divider-editorial mt-8">
+                    <div class="line"></div>
+                    <span class="material-symbols-outlined star-icon leaf-icon">eco</span>
+                    <div class="line"></div>
+                </div>
+            </header>
 
-            <p class="gift-intro fade-up">
-                Your presence at our wedding is the greatest gift of all. However, if you wish to honor us with a gift, we would be grateful for a contribution towards our future together.
-            </p>
-
-            <div class="gift-cards-wrapper">
-                <!-- QRIS Card -->
-                <div class="gift-card qris-card fade-up">
-                    <div class="gift-card-header">
-                        <i class="fas fa-qrcode"></i>
-                        <h3>QRIS Payment</h3>
-                    </div>
-                    <div class="qris-content">
-                        <!-- Replace with your QRIS code -->
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=ExampleQRIS" alt="QRIS Code" class="qris-image">
-                        <p class="qris-instruction">Scan the QR code to make a donation</p>
+            <!-- Main Layout Columns (Asymmetric Grid) -->
+            <div class="gift-grid-editorial">
+                <!-- Left Column (QRIS Payment) -->
+                <div class="gift-col-qris fade-up">
+                    <div class="qris-card-editorial shadow-editorial">
+                        <div class="qris-header-internal">
+                            <h3 class="label-editorial font-bold text-rose">QRIS PAYMENT</h3>
+                            <span class="material-symbols-outlined corner-icon">qr_code_2</span>
+                        </div>
+                        <div class="qris-image-wrapper">
+                            <!-- Replace with your QRIS code -->
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVpXWMysOzztyUBvabZdG5iaMuEbRDOgw1X0MreRpp7P2SoKXoaq_HHHQ_VRQglLXkptx1lnKtd5RPWsANlLl4K_X30oKcIVBuHKXZ3e8iMgPdlLodeXHPx0DjxGnESHbkUbPXUnT7hxyiDBWPrehylXQGbrkU2MBHMtHT9OCOq-8g22lxVAmNdedh2k-JEfiXqtQ2S_MOC799e5TdsfznT6gCKsattIDhK21Ecb0TypdPr425427QhKLtMpUWjWM5Lc7AZFyy" alt="QRIS Code" class="qris-image-editorial">
+                        </div>
+                        <p class="qris-instruction-editorial italic">Scan the QR code to make a donation</p>
+                        <div class="qris-footer">
+                            <div class="divider-line"></div>
+                            <span class="footer-label">SUPPORTED BY ALL BANKS</span>
+                            <div class="divider-line"></div>
+                        </div>
+                        <div class="qris-bank-icons-footer">
+                            <span class="material-symbols-outlined">account_balance</span>
+                            <span class="material-symbols-outlined">account_balance_wallet</span>
+                            <span class="material-symbols-outlined">contactless</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Bank Transfer Card -->
-                <div class="gift-card bank-card fade-up">
-                    <div class="gift-card-header">
-                        <i class="fas fa-university"></i>
-                        <h3>Bank Transfer</h3>
-                    </div>
-                    <div class="bank-details">
-                        <!-- BCA Account -->
-                        <div class="bank-item" id="bcaAccount">
-                            <div class="bank-toggle">
-                                <span class="bank-name">BCA</span>
-                                <i class="fas fa-chevron-down"></i>
+                <!-- Right Column (Bank Transfer) -->
+                <div class="gift-col-bank fade-up">
+                    <div class="bank-card-editorial shadow-editorial">
+                        <div class="bank-header-editorial mb-8">
+                            <div class="bank-icon-box">
+                                <span class="material-symbols-outlined">account_balance</span>
                             </div>
-                            <div class="bank-info">
-                                <p class="account-number-wrapper">
-                                    <span class="account-label">No. Rek:</span>
-                                    <span class="account-number" data-copy="1234567890">1234 5678 90</span>
-                                    <button class="copy-btn" title="Copy to clipboard">
-                                        <i class="fas fa-copy"></i>
-                                    </button>
-                                </p>
-                                <p class="account-name">a.n Romeo Montague</p>
-                            </div>
+                            <h3 class="label-editorial font-bold text-sm">BANK TRANSFER</h3>
                         </div>
+                        
+                        <div class="bank-list-editorial">
+                            <!-- BCA Row -->
+                            <div class="bank-row-refined group">
+                                <div class="bank-info-editorial">
+                                    <span class="bank-label-rose">BANK CENTRAL ASIA</span>
+                                    <p class="bank-number-refined">8823 4410 990</p>
+                                    <p class="bank-name-editorial">A/N Jonathan & Aurelia</p>
+                                </div>
+                                <button class="copy-btn-refined" onclick="copyToClipboard('88234410990', this)">
+                                    <span class="material-symbols-outlined">content_copy</span>
+                                    <span>COPY NUMBER</span>
+                                </button>
+                            </div>
 
-                        <!-- Mandiri Account -->
-                        <div class="bank-item" id="mandiriAccount">
-                            <div class="bank-toggle">
-                                <span class="bank-name">Mandiri</span>
-                                <i class="fas fa-chevron-down"></i>
+                            <!-- Mandiri Row -->
+                            <div class="bank-row-refined group">
+                                <div class="bank-info-editorial">
+                                    <span class="bank-label-rose">BANK MANDIRI</span>
+                                    <p class="bank-number-refined">1120 0011 2233 4</p>
+                                    <p class="bank-name-editorial">A/N Jonathan & Aurelia</p>
+                                </div>
+                                <button class="copy-btn-refined" onclick="copyToClipboard('1120001122334', this)">
+                                    <span class="material-symbols-outlined">content_copy</span>
+                                    <span>COPY NUMBER</span>
+                                </button>
                             </div>
-                            <div class="bank-info">
-                                <p class="account-number-wrapper">
-                                    <span class="account-label">No. Rek:</span>
-                                    <span class="account-number" data-copy="0987654321">0987 6543 21</span>
-                                    <button class="copy-btn" title="Copy to clipboard">
-                                        <i class="fas fa-copy"></i>
-                                    </button>
-                                </p>
-                                <p class="account-name">a.n Juliet Capulet</p>
-                            </div>
-                        </div>
 
-                        <!-- BRI Account -->
-                        <div class="bank-item" id="briAccount">
-                            <div class="bank-toggle">
-                                <span class="bank-name">BRI</span>
-                                <i class="fas fa-chevron-down"></i>
-                            </div>
-                            <div class="bank-info">
-                                <p class="account-number-wrapper">
-                                    <span class="account-label">No. Rek:</span>
-                                    <span class="account-number" data-copy="11223344556677">112 2334 4556 677</span>
-                                    <button class="copy-btn" title="Copy to clipboard">
-                                        <i class="fas fa-copy"></i>
-                                    </button>
-                                </p>
-                                <p class="account-name">a.n Romeo Montague</p>
+                            <!-- BRI Row -->
+                            <div class="bank-row-refined group">
+                                <div class="bank-info-editorial">
+                                    <span class="bank-label-rose">BANK BRI</span>
+                                    <p class="bank-number-refined">0032 0100 2234 567</p>
+                                    <p class="bank-name-editorial">A/N Jonathan & Aurelia</p>
+                                </div>
+                                <button class="copy-btn-refined" onclick="copyToClipboard('003201002234567', this)">
+                                    <span class="material-symbols-outlined">content_copy</span>
+                                    <span>COPY NUMBER</span>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Thank You Message -->
-            <div class="gift-thank-you fade-up">
-                <i class="fas fa-heart"></i>
-                <p>Thank you for your love and generosity. Your blessing means the world to us.</p>
             </div>
         </div>
     </section>

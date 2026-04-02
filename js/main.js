@@ -285,4 +285,70 @@
     }
     */
 
+    // ==================== CLIPBOARD FUNCTIONALITY ==================== -->
+
+    /**
+     * Copy text to clipboard and show feedback
+     * @param {string} text - Text to copy
+     * @param {HTMLElement} btn - Button element that was clicked
+     */
+    window.copyToClipboard = function(text, btn) {
+        if (!navigator.clipboard) {
+            // Fallback for older browsers
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showCopyFeedback(btn);
+            } catch (err) {
+                console.error('Fallback copy failed', err);
+            }
+            document.body.removeChild(textArea);
+            return;
+        }
+
+        navigator.clipboard.writeText(text).then(function() {
+            showCopyFeedback(btn);
+        }, function(err) {
+            console.error('Could not copy text: ', err);
+        });
+    };
+
+    /**
+     * Show visual feedback after copying
+     * @param {HTMLElement} btn - Button element
+     */
+    function showCopyFeedback(btn) {
+        const originalContent = btn.innerHTML;
+        btn.innerHTML = '<span class="material-symbols-outlined">done</span><span>COPIED!</span>';
+        btn.classList.add('copied');
+        
+        // Custom toast notification (optional follow-up)
+        if (typeof showToast === 'function') {
+            showToast('Account number copied to clipboard!');
+        }
+
+        setTimeout(function() {
+            btn.innerHTML = originalContent;
+            btn.classList.remove('copied');
+        }, 2000);
+    }
+
+    /**
+     * Simple Toast Notification (reusing if exists or creating local)
+     */
+    function showToast(message) {
+        let toast = document.querySelector('.toast-editorial');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.className = 'toast-editorial';
+            document.body.appendChild(toast);
+        }
+        toast.textContent = message;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+
 })();
