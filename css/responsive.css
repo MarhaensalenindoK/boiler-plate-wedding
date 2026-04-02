@@ -1,0 +1,580 @@
+/* ========================================
+   WEDDING WEBSITE - RESPONSIVE STYLES
+   Mobile-First Media Queries
+   ======================================== */
+
+/* ==================== LARGE PHONES (480px+) ==================== */
+@media (min-width: 480px) {
+    /* Typography adjustments */
+    h1 { font-size: var(--font-size-3xl); }
+    h2 { font-size: var(--font-size-2xl); }
+
+    /* Hero section */
+    .hero-subtitle {
+        font-size: var(--font-size-base);
+    }
+
+    .couple-names {
+        font-size: var(--font-size-5xl);
+    }
+
+    /* Timeline milestones */
+    .milestone-marker {
+        width: 45px;
+        height: 45px;
+    }
+
+    /* Gallery */
+    .gallery-masonry {
+        margin-top: var(--spacing-4);
+    }
+}
+
+/* ==================== TABLETS (768px+) ==================== */
+@media (min-width: 768px) {
+    /* Update CSS variables for larger screens */
+    :root {
+        --font-size-5xl: 3.5rem;
+        --font-size-6xl: 4.5rem;
+        --section-padding-vertical: var(--spacing-20);
+    }
+
+    html {
+        font-size: 17px;
+    }
+
+    /* Navbar */
+    .navbar .nav-container {
+        padding: 0 var(--spacing-6);
+    }
+
+    .nav-menu {
+        gap: var(--spacing-3);
+    }
+
+    .nav-link {
+        font-size: var(--font-size-sm);
+        padding: var(--spacing-2) var(--spacing-4);
+    }
+
+    /* Hero Section */
+    .hero-content {
+        padding: var(--spacing-12);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-lg);
+        letter-spacing: 0.4em;
+    }
+
+    .couple-names {
+        font-size: var(--font-size-6xl);
+    }
+
+    .wedding-date {
+        font-size: var(--font-size-3xl);
+    }
+
+    /* Story Section */
+    .story-content {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .story-text-wrapper {
+        padding-left: var(--spacing-8);
+    }
+
+    .story-intro {
+        font-size: var(--font-size-xl);
+    }
+
+    /* Timeline Milestones */
+    .milestone {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing-5);
+    }
+
+    /* Events Section */
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Timeline Section */
+    .timeline-container {
+        padding-left: var(--spacing-16);
+    }
+
+    .timeline-marker {
+        width: var(--spacing-12);
+        height: var(--spacing-12);
+        left: calc(var(--spacing-6) - var(--spacing-6));
+    }
+
+    .timeline-line {
+        left: calc(var(--spacing-6) + var(--spacing-6));
+    }
+
+    .timeline-content {
+        padding: var(--spacing-5) var(--spacing-8);
+    }
+
+    /* Gallery */
+    .gallery-masonry {
+        margin-top: var(--spacing-6);
+    }
+
+    /* RSVP Section */
+    .rsvp-content {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-16);
+    }
+
+    .rsvp-form-wrapper {
+        max-width: 500px;
+    }
+
+    .form-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Gift Section */
+    .gift-cards-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Countdown */
+    .countdown-timer {
+        gap: var(--spacing-6);
+    }
+
+    .countdown-number {
+        font-size: var(--font-size-4xl);
+    }
+
+    .countdown-separator {
+        font-size: var(--font-size-3xl);
+    }
+
+    /* Footer */
+    .footer-names {
+        font-size: var(--font-size-4xl);
+    }
+
+    /* Lightbox */
+    .lightbox-content img {
+        max-height: calc(100vh - var(--spacing-24));
+    }
+}
+
+/* ==================== SMALL LAPTOPS (1024px+) ==================== */
+@media (min-width: 1024px) {
+    /* Update CSS variables */
+    :root {
+        --container-max-width: 1200px;
+    }
+
+    html {
+        font-size: 18px;
+    }
+
+    /* Navbar */
+    .navbar {
+        padding: var(--spacing-5) 0;
+    }
+
+    .navbar.scrolled {
+        padding: var(--spacing-3) 0;
+    }
+
+    .nav-logo {
+        font-size: var(--font-size-3xl);
+    }
+
+    .nav-menu {
+        gap: var(--spacing-4);
+    }
+
+    /* Hero Section */
+    .hero-content {
+        padding: var(--spacing-16);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-xl);
+        letter-spacing: 0.5em;
+    }
+
+    /* Story Section */
+    .story-image-wrapper {
+        position: relative;
+    }
+
+    .story-image-frame {
+        border-radius: var(--radius-xl);
+    }
+
+    .decor-leaf {
+        width: 150px;
+        height: 150px;
+    }
+
+    .story-text-wrapper {
+        padding-left: var(--spacing-12);
+    }
+
+    /* Events Section */
+    .event-card {
+        padding: var(--spacing-10);
+    }
+
+    .event-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .event-title {
+        font-size: var(--font-size-3xl);
+    }
+
+    /* Timeline Section */
+    .timeline-container {
+        max-width: 900px;
+        padding-left: var(--spacing-20);
+    }
+
+    .timeline-marker {
+        width: var(--spacing-14);
+        height: var(--spacing-14);
+    }
+
+    .timeline-content {
+        padding: var(--spacing-6) var(--spacing-10);
+    }
+
+    .timeline-title {
+        font-size: var(--font-size-xl);
+    }
+
+    /* Gallery */
+    .gallery-masonry {
+        margin-top: var(--spacing-8);
+    }
+
+    /* RSVP Section */
+    .rsvp-form-wrapper {
+        max-width: 600px;
+    }
+
+    .rsvp-submit-btn {
+        padding: var(--spacing-6);
+    }
+
+    /* Gift Section */
+    .gift-intro {
+        font-size: var(--font-size-xl);
+        max-width: 700px;
+    }
+
+    .qris-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* Countdown */
+    .countdown-number {
+        font-size: var(--font-size-5xl);
+    }
+
+    /* Footer */
+    .footer-names {
+        font-size: var(--font-size-4xl);
+    }
+
+    .footer-hashtag span {
+        font-size: var(--font-size-xl);
+    }
+
+    .social-link {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* ==================== DESKTOPS (1440px+) ==================== */
+@media (min-width: 1440px) {
+    /* Update CSS variables */
+    :root {
+        --container-max-width: 1400px;
+    }
+
+    /* Navbar */
+    .nav-container {
+        padding: 0 var(--spacing-8);
+    }
+
+    /* Hero Section - Parallax effect enhancement */
+    .hero-background {
+        background-size: cover !important;
+        background-position: center !important;
+    }
+
+    /* Story Section */
+    .story-content {
+        gap: var(--spacing-20);
+    }
+
+    .decor-leaf {
+        width: 180px;
+        height: 180px;
+    }
+
+    /* Events Section */
+    .events-grid {
+        gap: var(--spacing-10);
+    }
+
+    .event-card {
+        padding: var(--spacing-12);
+    }
+
+    /* Timeline Section */
+    .timeline-container {
+        max-width: 1000px;
+    }
+
+    /* Gallery */
+    .gallery-masonry {
+        margin-top: var(--spacing-10);
+    }
+
+    /* Gift Section */
+    .gift-cards-wrapper {
+        gap: var(--spacing-10);
+    }
+
+    .qris-image {
+        width: 280px;
+        height: 280px;
+    }
+
+    /* Countdown */
+    .countdown-number {
+        font-size: var(--font-size-6xl);
+    }
+}
+
+/* ==================== LARGE DESKTOPS (1920px+) ==================== */
+@media (min-width: 1920px) {
+    :root {
+        --container-max-width: 1600px;
+        --font-size-5xl: 4rem;
+        --font-size-6xl: 5.5rem;
+    }
+
+    html {
+        font-size: 20px;
+    }
+
+    /* Hero Section */
+    .hero-subtitle {
+        letter-spacing: 0.8em;
+    }
+}
+
+/* ==================== TOUCH DEVICE OPTIMIZATIONS ==================== */
+@media (hover: none) and (pointer: coarse) {
+    /* Remove hover effects on touch devices */
+    .milestone:hover,
+    .event-card:hover,
+    .timeline-content:hover,
+    .gallery-item:hover img,
+    .rsvp-submit-btn:hover,
+    .social-link:hover,
+    .back-to-top:hover {
+        transform: none;
+    }
+
+    /* Adjust tap targets */
+    .nav-toggle,
+    .copy-btn,
+    .bank-toggle,
+    .gallery-item {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Remove hover-specific animations */
+    .btn:hover {
+        transform: none;
+    }
+}
+
+/* ==================== PRINT STYLES ==================== */
+@media print {
+    /* Hide non-essential elements */
+    .navbar,
+    .scroll-indicator,
+    .back-to-top,
+    .preloader {
+        display: none !important;
+    }
+
+    /* Reset colors for printing */
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    /* Ensure proper page breaks */
+    section {
+        page-break-inside: avoid;
+    }
+
+    .section-header,
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+
+    /* Hide background images */
+    .hero-background {
+        background: none !important;
+    }
+
+    .hero-overlay {
+        display: none;
+    }
+
+    /* Adjust fonts for print */
+    .couple-names {
+        font-size: 2rem;
+    }
+
+    /* Remove shadows and effects */
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    /* Ensure images print properly */
+    img {
+        max-width: 100% !important;
+    }
+
+    /* Hide interactive elements */
+    .lightbox,
+    .toast,
+    .rsvp-form,
+    .bank-toggle {
+        display: none !important;
+    }
+
+    /* Show bank info by default for print */
+    .bank-info {
+        max-height: none !important;
+        padding: var(--spacing-4) !important;
+    }
+}
+
+/* ==================== HIGH CONTRAST MODE ==================== */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-rose: #993333;
+        --text-primary: #000000;
+        --text-secondary: #333333;
+    }
+
+    .hero-overlay {
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .nav-link::after {
+        height: 3px;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        border-width: 3px;
+    }
+}
+
+/* ==================== REDUCED MOTION ==================== */
+@media (prefers-reduced-motion: reduce) {
+    /* Disable or reduce animations */
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    /* Disable parallax */
+    .hero-background {
+        transform: none !important;
+    }
+
+    /* Disable scroll animations */
+    .fade-up,
+    .fade-down,
+    .fade-left,
+    .fade-right,
+    .zoom-in,
+    .zoom-out {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    /* Disable smooth scroll */
+    html {
+        scroll-behavior: auto;
+    }
+
+    /* Disable bouncing/float animations */
+    .scroll-indicator,
+    .heart-particle,
+    .heartbeat,
+    .float,
+    .pulse,
+    .bounce {
+        animation: none !important;
+    }
+}
+
+/* ==================== LANDSCAPE MOBILE (for phones) ==================== */
+@media (max-height: 500px) and (orientation: landscape) {
+    /* Adjust for landscape mobile viewing */
+    .hero {
+        height: 100vh;
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: var(--spacing-4);
+    }
+
+    .couple-names {
+        font-size: var(--font-size-3xl);
+    }
+
+    .wedding-date {
+        font-size: var(--font-size-lg);
+    }
+
+    /* Stack story section */
+    .story-content {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Adjust timeline for landscape */
+    .timeline-container {
+        padding-left: var(--spacing-8) !important;
+    }
+
+    .timeline-marker {
+        width: var(--spacing-8) !important;
+        height: var(--spacing-8) !important;
+    }
+}

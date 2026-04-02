@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Romeo & Juliet's Wedding Website - Save the Date">
+    <title>Romeo & Juliet | Wedding Website</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;500;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- ==================== PRELOADER ==================== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-names">
+                <span class="name-first">Romeo</span>
+                <span class="name-amp">&</span>
+                <span class="name-second">Juliet</span>
+            </div>
+            <div class="preloader-hearts">
+                <span class="heart"></span>
+                <span class="heart"></span>
+                <span class="heart"></span>
+            </div>
+        </div>
+    </div>
+    <!-- ====================================================== -->
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">R&J</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#story" class="nav-link">Our Story</a></li>
+                <li><a href="#events" class="nav-link">Events</a></li>
+                <li><a href="#timeline" class="nav-link">Timeline</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#rsvp" class="nav-link">RSVP</a></li>
+                <li><a href="#gift" class="nav-link">Gift</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+    <!-- ====================================================== -->
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="hero">
+        <div class="hero-background" id="heroBackground"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle">Together with their families</p>
+            <!-- Edit couple names and date here -->
+            <h1 class="couple-names animate-text">Romeo & Juliet</h1>
+            <p class="wedding-date animate-text">December 31, 2024</p>
+            <p class="save-the-date animate-text">Save the Date</p>
+        </div>
+        <a href="#story" class="scroll-indicator">
+            <span class="scroll-text">Scroll Down</span>
+            <span class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </span>
+        </a>
+    </section>
+    <!-- ====================================================== -->
+
+    <!-- ==================== OUR STORY SECTION ==================== -->
+    <section class="story-section" id="story">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Journey</span>
+                <h2 class="section-title">Our Story</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="story-content">
+                <div class="story-image-wrapper">
+                    <div class="story-image-frame">
+                        <!-- Replace with your couple photo -->
+                        <img src="images/couple.jpg" alt="Romeo and Juliet" class="story-main-image">
+                    </div>
+                    <div class="story-decorative-elements">
+                        <span class="decor-leaf leaf-1"></span>
+                        <span class="decor-leaf leaf-2"></span>
+                    </div>
+                </div>
+
+                <div class="story-text-wrapper">
+                    <p class="story-intro">
+                        Love at first sight isn't just a fairy tale. Sometimes, it's reality. When Romeo met Juliet at a quiet coffee shop on a rainy afternoon, neither of them knew that this chance encounter would change their lives forever.
+                    </p>
+                    <p class="story-body">
+                        What started as innocent conversation over steaming cups of latte quickly blossomed into something beautiful. Through late-night talks, shared dreams, and endless laughter, they discovered a connection that transcended time and distance.
+                    </p>
+
+                    <div class="timeline-milestones">
+                        <!-- Milestone 1 -->
+                        <div class="milestone fade-up">
+                            <div class="milestone-marker">
+                                <i class="fas fa-coffee"></i>
+                            </div>
+                            <div class="milestone-content">
+                                <span class="milestone-date">June 15, 2020</span>
+                                <h4 class="milestone-title">First Meeting</h4>
+                                <p class="milestone-desc">A chance encounter at a coffee shop</p>
+                            </div>
+                        </div>
+
+                        <!-- Milestone 2 -->
+                        <div class="milestone fade-up">
+                            <div class="milestone-marker">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="milestone-content">
+                                <span class="milestone-date">September 1, 2020</span>
+                                <h4 class="milestone-title">First Date</h4>
+                                <p class="milestone-desc">Dinner under the stars</p>
+                            </div>
+                        </div>
+
+                        <!-- Milestone 3 -->
+                        <div class="milestone fade-up">
+                            <div class="milestone-marker">
+                                <i class="fas fa-ring"></i>
+                            </div>
+                            <div class="milestone-content">
+                                <span class="milestone-date">December 24, 2023</span>
+                                <h4 class="milestone-title">The Proposal</h4>
+                                <p class="milestone-desc">She said yes!</p>
+                            </div>
+                        </div>
+
+                        <!-- Milestone 4 -->
+                        <div class="milestone fade-up">
+                            <div class="milestone-marker">
+                                <i class="fas fa-church"></i>
+                            </div>
+                            <div class="milestone-content">
+                                <span class="milestone-date">December 31, 2024</span>
+                                <h4 class="milestone-title">The Wedding</h4>
+                                <p class="milestone-desc">Forever begins</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ====================================================== -->
+
+    <!-- ==================== EVENT DETAILS SECTION ==================== -->
+    <section class="events-section" id="events">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">You're Invited</span>
+                <h2 class="section-title">Event Details</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="events-grid">
+                <!-- Ceremony Card -->
+                <div class="event-card ceremony-card fade-up">
+                    <div class="event-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <h3 class="event-title">The Ceremony</h3>
+                    <div class="event-details">
+                        <div class="event-detail-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Sunday, December 31, 2024</span>
+                        </div>
+                        <div class="event-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>2:00 PM - 4:00 PM</span>
+                        </div>
+                        <div class="event-detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Saint Peter's Cathedral, Verona</span>
+                        </div>
+                    </div>
+                    <a href="#" class="event-btn">Get Directions</a>
+                </div>
+
+                <!-- Reception Card -->
+                <div class="event-card reception-card fade-up">
+                    <div class="event-icon">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <h3 class="event-title">The Reception</h3>
+                    <div class="event-details">
+                        <div class="event-detail-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Sunday, December 31, 2024</span>
+                        </div>
+                        <div class="event-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>6:00 PM - Midnight</span>
+                        </div>
+                        <div class="event-detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>The Grand Ballroom, Verona Estate</span>
+                        </div>
+                    </div>
+                    <a href="#" class="event-btn">Get Directions</a>
+                </div>
+            </div>
+
+            <!-- Map Placeholder -->
+            <!-- <div class="map-container fade-up">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3129.650204843153!2d106.80927554714353!3d-6.605379894167003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5dd914410a3%3A0xd74ffa207117b26b!2sPuri%20Begawan!5e0!3m2!1sid!2sid!4v1775053405919!5m2!1sid!2sid"
+                    width="100%"
+                    height="400"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div> -->
+        </div>
+    </section>
+    <!-- ====================================================== -->
+
+    <!-- ==================== TIMELINE SECTION ==================== -->
+    <section class="timeline-section" id="timeline">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">The Big Day</span>
+                <h2 class="section-title">Wedding Timeline</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="timeline-container">
+                <!-- Hair & Makeup -->
+                <div class="timeline-item fade-up">
+                    <div class="timeline-marker">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <div class="timeline-line"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">9:00 AM - 12:00 PM</span>
+                        <h4 class="timeline-title">Hair & Makeup</h4>
+                        <p class="timeline-desc">Bridal party getting ready at the hotel suite</p>
+                    </div>
+                </div>
+
+                <!-- Ceremony -->
+                <div class="timeline-item fade-up">
+                    <div class="timeline-marker">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <div class="timeline-line"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">2:00 PM - 4:00 PM</span>
+                        <h4 class="timeline-title">Ceremony</h4>
+                        <p class="timeline-desc">Exchange of vows at Saint Peter's Cathedral</p>
+                    </div>
+                </div>
+
+                <!-- Photos -->
+                <div class="timeline-item fade-up">
+                    <div class="timeline-marker">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div class="timeline-line"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">4:00 PM - 5:30 PM</span>
+                        <h4 class="timeline-title">Photography Session</h4>
+                        <p class="timeline-desc">Couple and family photos at the garden</p>
+                    </div>
+                </div>
+
+                <!-- Cocktails -->
+                <div class="timeline-item fade-up">
+                    <div class="timeline-marker">
+                        <i class="fas fa-cocktail"></i>
+                    </div>
+                    <div class="timeline-line"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">5:30 PM - 6:30 PM</span>
+                        <h4 class="timeline-title">Cocktail Hour</h4>
+                        <p class="timeline-desc">Drinks and hors d'oeuvres on the terrace</p>
+                    </div>
+                </div>
+
+                <!-- Reception -->
+                <div class="timeline-item fade-up">
+                    <div class="timeline-marker">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <div class="timeline-line"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">6:30 PM - Midnight</span>
+                        <h4 class="timeline-title">Reception Dinner & Dance</h4>
+                        <p class="timeline-desc">Dinner, speeches, and dancing at the Grand Ballroom</p>
+                    </div>
+                </div>
+
+                <!-- Cake Cutting -->
+                <div class="timeline-item fade-up">
+                    <div class="timeline-marker">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <div class="timeline-line"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">9:00 PM</span>
+                        <h4 class="timeline-title">Cake Cutting</h4>
+                        <p class="timeline-desc">Sweet moment together</p>
+                    </div>
+                </div>
+
+                <!-- Farewell -->
+                <div class="timeline-item fade-up last-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">Midnight</span>
+                        <h4 class="timeline-title">Grand Exit</h4>
+                        <p class="timeline-desc">Sparkler send-off into the night</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ====================================================== -->
+
+    <!-- ==================== GALLERY SECTION ==================== -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Captured Moments</span>
+                <h2 class="section-title">Photo Gallery</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Masonry Grid -->
+            <div class="gallery-masonry" id="galleryMasonry">
+                <!-- Replace src with your actual images -->
+                <div class="gallery-item fade-up" data-size="1x1">
+                    <img src="https://picsum.photos/400/400?random=1" alt="Wedding photo 1" loading="lazy">
+                </div>
+                <div class="gallery-item fade-up" data-size="1x2">
+                    <img src="https://picsum.photos/400/600?random=2" alt="Wedding photo 2" loading="lazy">
+                </div>
+                <div class="gallery-item fade-up" data-size="2x1">
+                    <img src="https://picsum.photos/600/400?random=3" alt="Wedding photo 3" loading="lazy">
+                </div>
+                <div class="gallery-item fade-up" data-size="1x1">
+                    <img src="https://picsum.photos/400/400?random=4" alt="Wedding photo 4" loading="lazy">
+                </div>
+                <div class="gallery-item fade-up" data-size="2x2">
+                    <img src="https://picsum.photos/600/600?random=5" alt="Wedding photo 5" loading="lazy">
+                </div>
+                <div class="gallery-item fade-up" data-size="1x2">
+                    <img src="https://picsum.photos/400/600?random=6" alt="Wedding photo 6" loading="lazy">
+                </div>
+                <div class="gallery-item fade-up" data-size="1x1">
+                    <img src="https://picsum.photos/400/400?random=7" alt="Wedding photo 7" loading="lazy">
+                </div>
+                <div class="gallery-item fade-up" data-size="2x1">
+                    <img src="https://picsum.photos/600/400?random=8" alt="Wedding photo 8" loading="lazy">
+                </div>
+                <div class="gallery-item fade-up" data-size="1x2">
+                    <img src="https://picsum.photos/400/600?random=9" alt="Wedding photo 9" loading="lazy">
+                </div>
+                <div class="gallery-item fade-up" data-size="1x1">
+                    <img src="https://picsum.photos/400/400?random=10" alt="Wedding photo 10" loading="lazy">
+                </div>
+                <div class="gallery-item fade-up" data-size="2x2">
+                    <img src="https://picsum.photos/600/600?random=11" alt="Wedding photo 11" loading="lazy">
+                </div>
+                <div class="gallery-item fade-up" data-size="1x1">
+                    <img src="https://picsum.photos/400/400?random=12" alt="Wedding photo 12" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ====================================================== -->
+
+    <!-- ==================== RSVP SECTION ==================== -->
+    <section class="rsvp-section" id="rsvp">
+        <div class="container max-w-7xl mx-auto px-4">
+            <!-- Header Section -->
+            <header class="section-header editorial-header">
+                <div class="header-decoration">
+                    <span class="material-symbols-outlined text-8xl opacity-10">auto_awesome</span>
+                </div>
+                <p class="section-subtitle-editorial">Please Respond</p>
+                <h2 class="section-title-editorial">RSVP</h2>
+                <div class="divider-editorial">
+                    <div class="line"></div>
+                    <span class="material-symbols-outlined star-icon">star</span>
+                    <div class="line"></div>
+                </div>
+            </header>
+
+            <div class="rsvp-content" id="rsvpContent">
+                <!-- Left Column: RSVP Form -->
+                <div class="rsvp-form-wrapper fade-up">
+                    <div class="rsvp-form-card">
+                        <h2 class="form-title-editorial">Reserve Your Seat</h2>
+                        <form class="rsvp-form-editorial" id="rsvpForm">
+                            <!-- Email Field -->
+                            <div class="form-group-editorial">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required placeholder="clara@example.com">
+                            </div>
+
+                            <!-- Attendance Status -->
+                            <div class="form-group-editorial no-border">
+                                <span class="label-editorial">Will You Join Us?</span>
+                                <div class="radio-group-editorial">
+                                    <label class="radio-label">
+                                        <input type="radio" name="attendance" value="yes" required>
+                                        <span class="custom-radio"></span>
+                                        <span class="radio-text">Joyfully Accepts</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="attendance" value="no" required>
+                                        <span class="custom-radio secondary"></span>
+                                        <span class="radio-text">Regretfully Declines</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Guest Count -->
+                            <div class="form-group-editorial">
+                                <label for="guests">Number of Guests</label>
+                                <input type="number" id="guests" name="guests" min="1" max="10" value="1" required>
+                            </div>
+
+                            <!-- Message Field -->
+                            <div class="form-group-editorial">
+                                <label for="message">A Message for the Couple</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Your warm wishes..."></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="pt-4">
+                                <button type="submit" class="rsvp-submit-btn-editorial">
+                                    <span class="btn-text">Send Response</span>
+                                    <span class="btn-loader">
+                                        <i class="fas fa-spinner fa-spin"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Success Message -->
+                        <div class="rsvp-success-editorial" id="rsvpSuccess">
+                            <div class="success-icon-editorial">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                            <h3>Thank You!</h3>
+                            <p>Your response has been received. We appreciate your wishes!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Recent Responses -->
+                <div class="rsvp-list-wrapper-editorial fade-up" id="rsvpListWrapper">
+                    <div class="rsvp-list-card-editorial">
+                        <div class="list-header-editorial">
+                            <h2>Recent Responses</h2>
+                            <span class="rsvp-count-pill" id="rsvpCount">0 Guests Attending</span>
+                        </div>
+                        <div class="rsvp-list-scroll-editorial" id="rsvpListScroll">
+                            <!-- RSVP Items will be populated here as Editorial Cards -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Decorative Ornament -->
+            <div class="absolute-decoration bottom-left">
+                <span class="material-symbols-outlined text-7xl opacity-20">eco</span>
+            </div>
+        </div>
+    </section>
+    <!-- ====================================================== -->
+
+    <!-- ==================== GIFT SECTION ==================== -->
+    <section class="gift-section" id="gift">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Your Presence is Present Enough</span>
+                <h2 class="section-title">Wedding Gift</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <p class="gift-intro fade-up">
+                Your presence at our wedding is the greatest gift of all. However, if you wish to honor us with a gift, we would be grateful for a contribution towards our future together.
+            </p>
+
+            <div class="gift-cards-wrapper">
+                <!-- QRIS Card -->
+                <div class="gift-card qris-card fade-up">
+                    <div class="gift-card-header">
+                        <i class="fas fa-qrcode"></i>
+                        <h3>QRIS Payment</h3>
+                    </div>
+                    <div class="qris-content">
+                        <!-- Replace with your QRIS code -->
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=ExampleQRIS" alt="QRIS Code" class="qris-image">
+                        <p class="qris-instruction">Scan the QR code to make a donation</p>
+                    </div>
+                </div>
+
+                <!-- Bank Transfer Card -->
+                <div class="gift-card bank-card fade-up">
+                    <div class="gift-card-header">
+                        <i class="fas fa-university"></i>
+                        <h3>Bank Transfer</h3>
+                    </div>
+                    <div class="bank-details">
+                        <!-- BCA Account -->
+                        <div class="bank-item" id="bcaAccount">
+                            <div class="bank-toggle">
+                                <span class="bank-name">BCA</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="bank-info">
+                                <p class="account-number-wrapper">
+                                    <span class="account-label">No. Rek:</span>
+                                    <span class="account-number" data-copy="1234567890">1234 5678 90</span>
+                                    <button class="copy-btn" title="Copy to clipboard">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </p>
+                                <p class="account-name">a.n Romeo Montague</p>
+                            </div>
+                        </div>
+
+                        <!-- Mandiri Account -->
+                        <div class="bank-item" id="mandiriAccount">
+                            <div class="bank-toggle">
+                                <span class="bank-name">Mandiri</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="bank-info">
+                                <p class="account-number-wrapper">
+                                    <span class="account-label">No. Rek:</span>
+                                    <span class="account-number" data-copy="0987654321">0987 6543 21</span>
+                                    <button class="copy-btn" title="Copy to clipboard">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </p>
+                                <p class="account-name">a.n Juliet Capulet</p>
+                            </div>
+                        </div>
+
+                        <!-- BRI Account -->
+                        <div class="bank-item" id="briAccount">
+                            <div class="bank-toggle">
+                                <span class="bank-name">BRI</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="bank-info">
+                                <p class="account-number-wrapper">
+                                    <span class="account-label">No. Rek:</span>
+                                    <span class="account-number" data-copy="11223344556677">112 2334 4556 677</span>
+                                    <button class="copy-btn" title="Copy to clipboard">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </p>
+                                <p class="account-name">a.n Romeo Montague</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thank You Message -->
+            <div class="gift-thank-you fade-up">
+                <i class="fas fa-heart"></i>
+                <p>Thank you for your love and generosity. Your blessing means the world to us.</p>
+            </div>
+        </div>
+    </section>
+    <!-- ====================================================== -->
+
+    <!-- ==================== COUNTDOWN SECTION ==================== -->
+    <section class="countdown-section">
+        <div class="container">
+            <div class="countdown-content">
+                <span class="countdown-label">Days Until We Say I Do</span>
+                <div class="countdown-timer" id="countdownTimer">
+                    <div class="countdown-item">
+                        <span class="countdown-number days" id="days">00</span>
+                        <span class="countdown-label-text">Days</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-number hours" id="hours">00</span>
+                        <span class="countdown-label-text">Hours</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-number minutes" id="minutes">00</span>
+                        <span class="countdown-label-text">Minutes</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-number seconds" id="seconds">00</span>
+                        <span class="countdown-label-text">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ====================================================== -->
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-couple">
+                        <h2 class="footer-names">Romeo & Juliet</h2>
+                        <p class="footer-date">December 31, 2024</p>
+                    </div>
+
+                    <div class="footer-hashtag">
+                        <span>#RomeoAndJulietForever</span>
+                    </div>
+
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Romeo & Juliet Wedding. Made with <i class="fas fa-heart"></i></p>
+                </div>
+            </div>
+        </div>
+
+        <button class="back-to-top" id="backToTop" aria-label="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+    <!-- ====================================================== -->
+
+    <!-- ==================== LIGHTBOX MODAL ==================== -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImage">
+        </div>
+    </div>
+    <!-- ====================================================== -->
+
+    <!-- JavaScript Files -->
+    <script src="js/preloader.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/scroll-anim.js"></script>
+    <script src="js/form-handler.js"></script>
+    <script src="js/bank-details.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
