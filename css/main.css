@@ -534,6 +534,7 @@ img {
     margin-bottom: var(--spacing-4);
     opacity: 0;
     animation: fadeInUp 1s ease forwards 0.8s;
+    color: var(--neutral-white);
 }
 
 .wedding-date {
