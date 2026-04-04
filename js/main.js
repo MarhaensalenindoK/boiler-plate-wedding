@@ -23,7 +23,7 @@
         // Add parallax effect for hero background (if supported)
         initParallax();
 
-        // Generate floating hearts animation
+        // Generate floating hearts animation (Deactivated)
         initFloatingHearts();
 
         // Log any console errors in production
@@ -215,12 +215,12 @@
             }, parseFloat(duration) * 1000 + 2000);
         }
 
-        // Create hearts periodically
-        setInterval(createHeart, 300);
+        // Create hearts periodically (Further reduced frequency for an even subtler effect)
+        setInterval(createHeart, 1200);
 
         // Create initial batch of hearts
-        for (let i = 0; i < 5; i++) {
-            setTimeout(createHeart, i * 200);
+        for (let i = 0; i < 3; i++) {
+            setTimeout(createHeart, i * 400);
         }
     }
 
