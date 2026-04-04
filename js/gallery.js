@@ -87,7 +87,7 @@
 
             // Update column heights
             for (let col = bestCol; col < bestCol + colSpan; col++) {
-                columnHeights[col] += itemHeight;
+                columnHeights[col] += itemHeight + gap;
             }
 
             return {

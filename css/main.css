@@ -418,6 +418,44 @@ img {
     color: var(--text-primary);
 }
 
+/* Navbar Horizontal Scroll for Small Screens */
+@media (max-width: 665px) {
+    .nav-container {
+        padding: 0;
+    }
+    .nav-logo {
+        display: none; /* Hide logo to make more room for links */
+    }
+    .nav-menu {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+        padding: var(--spacing-4) var(--spacing-6);
+        gap: var(--spacing-4);
+        padding-bottom: 12px; /* Space for the thin scrollbar */
+        scrollbar-width: thin;
+        scrollbar-color: rgba(122, 90, 0, 0.3) transparent;
+    }
+    .nav-menu::-webkit-scrollbar {
+        height: 2px;
+        display: block;
+    }
+    .nav-menu::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .nav-menu::-webkit-scrollbar-thumb {
+        background-color: rgba(122, 90, 0, 0.3);
+        border-radius: 10px;
+    }
+    .nav-link {
+        flex-shrink: 0;
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        padding: var(--spacing-1) var(--spacing-2);
+    }
+}
+
 .nav-toggle {
     display: none;
     background: none;
@@ -1290,6 +1328,11 @@ img {
     }
 }
 
+.rsvp-list-wrapper-editorial {
+    position: relative;
+    z-index: 2; /* Ensure the list stays on top of decorations */
+}
+
 .list-header-editorial {
     display: flex;
     justify-content: space-between;
@@ -1427,10 +1470,12 @@ img {
 .absolute-decoration {
     position: absolute;
     color: #7a5a00;
+    z-index: 1; /* Layer behind cards */
+    pointer-events: none;
 }
 
 .absolute-decoration.bottom-left {
-    bottom: 32px;
+    bottom: -32px; /* Adjust to stay partially visible below */
     left: 32px;
 }
 
